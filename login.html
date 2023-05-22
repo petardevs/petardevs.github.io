@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Compass - Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="assets/img/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <div class="main">
+        <div class="switch">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="one">
+                <path fill="#14a800" fill-opacity="1" d="M0,224L40,202.7C80,181,160,139,240,106.7C320,75,400,53,480,69.3C560,85,640,139,720,138.7C800,139,880,85,960,101.3C1040,117,1120,203,1200,224C1280,245,1360,203,1400,181.3L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="two">
+                <path fill="#14a800" fill-opacity="1" d="M0,256L48,245.3C96,235,192,213,288,224C384,235,480,277,576,272C672,267,768,213,864,176C960,139,1056,117,1152,138.7C1248,160,1344,224,1392,256L1440,288L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+            </svg>
+        </div>
+
+        <div class="logo">
+            <img src="assets/img/logo.png">
+            <h1>Com<span>pass</span></h1>
+        </div>
+        <div class="down">
+            <div class="text">
+
+                <h2>Welcome to Com<span>pass</span></h2>
+                <p>Find your way in programming world</p>
+            </div>
+            <div class="buttons">
+                <a href="#" class="btn login">Log In</a>
+                <a href="#" class="btn outline signup">Register</a>
+            </div>
+        </div>
+
+        <div class="login-container">
+            <div class="top">
+                <ion-icon name="chevron-back-outline" class="back-btn"></ion-icon>
+                <h3>Log In</h3>
+            </div>
+            <div class="form">
+                <div class="inputs">
+                    <div class="input-field">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="text" placeholder="Username or email">
+                    </div>
+                    <div class="input-field password">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" placeholder="Password" id="pass1">
+                        <i class="fas fa-eye one"></i>
+                    </div>
+                </div>
+                <div class="submit-btns">
+                    <a href="#" class="btn">Continue</a>
+                    <div class="or">
+                        <div class="line"></div>
+                        <p>or</p>
+                        <div class="line"></div>
+                    </div>
+                    <a href="#" class="btn google"><img src="assets/img/google.png"> Continue with Google</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="signup-container">
+            <div class="top">
+                <ion-icon name="chevron-back-outline" class="back-btn"></ion-icon>
+                <h3>Sign Up</h3>
+            </div>
+            <div class="form">
+                <div class="inputs">
+                    <div class="input-field">
+                        <ion-icon name="person-outline"></ion-icon>
+                        <input type="text" placeholder="Username">
+                    </div>
+                    <div class="input-field email">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="email" placeholder="Email">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                    </div>
+                    <div class="input-field password">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" placeholder="Password" id="pass2">
+                        <i class="fas fa-eye two"></i>
+                    </div>
+                </div>
+                <div class="submit-btns">
+                    <a href="#" class="btn">Continue</a>
+                    <div class="or">
+                        <div class="line"></div>
+                        <p>or</p>
+                        <div class="line"></div>
+                    </div>
+                    <a href="#" class="btn google"><img src="assets/img/google.png"> Continue with Google</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/login.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
