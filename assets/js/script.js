@@ -300,6 +300,72 @@ favs.forEach(fav => {
     })
 });
 
+
+
+
+
+const elementIsVisibleInViewport = (el, partiallyVisible = false) => {
+    const { top, left, bottom, right } = el.getBoundingClientRect();
+    const { innerHeight, innerWidth } = window;
+    return partiallyVisible
+      ? ((top > 0 && top < innerHeight) ||
+          (bottom > 0 && bottom < innerHeight)) &&
+          ((left > 0 && left < innerWidth) || (right > 0 && right < innerWidth))
+      : top >= 0 && left >= 0 && bottom <= innerHeight && right <= innerWidth;
+};
+
+
+
+
+
+
+
+var ads = document.querySelector(".ads-box");
+var dots = document.querySelectorAll(".dot");
+
+ads.addEventListener("scroll", ()=> {
+
+    dots.forEach(dot => {
+        dot.classList.remove("active");
+    });
+
+    if(ads.scrollLeft < 252)
+        dots[0].classList.add("active");
+    else if(ads.scrollLeft < 504)
+        dots[1].classList.add("active");
+    else
+        dots[2].classList.add("active");
+
+});
+
+/* window.addEventListener("scroll", ()=> {
+    if(elementIsVisibleInViewport(ads, true))
+    {
+        var scrollAds = setInterval(() => {
+        
+            ads.scrollLeft += 250;
+            if(ads.scrollLeft >= 656)
+                ads.scrollLeft=0;
+        
+                console.log("ejo");
+        
+        }, 1000);
+    }
+    else
+        clearInterval(scrollAds);
+})
+ */
+
+var scrollAds = setInterval(() => {
+        
+    ads.scrollLeft += 250;
+    if(ads.scrollLeft >= 656)
+        ads.scrollLeft=0;
+
+}, 6000);
+
+
+
 }
 
 
