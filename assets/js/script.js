@@ -1,466 +1,211 @@
-/* ======================================= PAGES ======================================= */
+var a;
 
-const pages = document.querySelectorAll(".page");
-var navBtns = document.querySelectorAll(".mobile-nav .menu li a.nav-link")
-
-for (let i = 0; i < navBtns.length; i++) 
-{
-    navBtns[i].addEventListener("click", () => {
-        document.querySelector(".page.active").classList.remove("active");
-        document.querySelector(".mobile-nav .menu li a.active").classList.remove("active");
-        pages[i].classList.add("active");
-        navBtns[i].classList.add("active");
-
-        navBtns.forEach(e => {
-            if (e.classList.contains("active")) 
-            {
-                var t = e.querySelector("ion-icon").getAttribute("name");
-
-                t = t.replace("-outline", "")
-                e.querySelector("ion-icon").setAttribute("name", t);
-            }
-            if (!e.classList.contains("active")) 
-            {
-                var t = e.querySelector("ion-icon").getAttribute("name");
-
-                if(!t.includes("-outline"))
-                {
-                    t += "-outline";
-                }
-                e.querySelector("ion-icon").setAttribute("name", t);
-            }
-        });
-    })
+if (navigator.userAgent.match(/Android/i)
+    || navigator.userAgent.match(/webOS/i)
+    || navigator.userAgent.match(/iPhone/i)
+    || navigator.userAgent.match(/iPad/i)
+    || navigator.userAgent.match(/iPod/i)
+    || navigator.userAgent.match(/BlackBerry/i)
+    || navigator.userAgent.match(/Windows Phone/i)) {
+    a = true;
+} else {
+    a = false;
 }
 
-/* ========================================= SELECTOR ========================================= */
+/* ============================== NAV SCROLLED ============================ */
 
-let isDragging = false;
-
-var tabBox = document.querySelector(".selector ul");
-var Arrows = document.querySelectorAll(".selector .icon");
-let selector = document.querySelector(".selector");
-var btns = document.querySelectorAll(".selector ul li");
-
-Arrows.forEach(icon => {
-    icon.addEventListener("click", ()=> {
-        tabBox.scrollLeft += icon.id === "left" ? -250 : 250;
-    })
-})
-
-const dragging = (e)=> {
-    if(!isDragging) return;
-    tabBox.classList.add("dragging");
-    tabBox.scrollLeft -= e.movementX;
-}
-
-const dragStop = () => {
-    isDragging = false;
-    tabBox.classList.remove("dragging");
-}
-
-tabBox.addEventListener("mousedown", ()=> isDragging = true);
-tabBox.addEventListener("mousemove", dragging);
-tabBox.addEventListener("mouseup", dragStop);
-
-btns.forEach(btn => {
-    btn.addEventListener("click", () => {
-        var current = document.querySelector(".selector ul li.active");
-        current.classList.remove("active");
-        btn.classList.add("active");
-    })
-});
-
-selector.addEventListener("mouseleave", ()=> isDragging = false);
-
-/* ========================================= SIDEBAR ========================================= */
-
-var lis = document.querySelectorAll(".sidebar ul li");
-
-for (var i = 0; i < lis.length; i++) {
-    lis[i].addEventListener("click", function () {
-        var current = document.querySelectorAll(".active");
-        current[0].classList.remove("active")
-        this.classList.add("active");
-    });
-}
-
-/* ======================================= FILTER TOGGLE ======================================= */
-
-var filterBtns = document.querySelectorAll(".profile .filter .fil");
-var marker = document.querySelector(".filter .marker")
-
-filterBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
-        if(btn.classList.contains("right"))
-        {
-            marker.style.left="48%";
-        }
-        if(btn.classList.contains("left"))
-        {
-            marker.style.left="5px";
-        }
-    })
-});
-
-/* ================================= MOBILE FILTER TOGGLE ================================= */
-
-var mobileFilterBtns = document.querySelectorAll(".mobile-profile .filter .fil");
-var mobileMarker = document.querySelector(".mobile-profile .filter .marker")
-
-mobileFilterBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
-        if(btn.classList.contains("right"))
-        {
-            mobileMarker.style.left="48%";
-        }
-        if(btn.classList.contains("left"))
-        {
-            mobileMarker.style.left="5px";
-        }
-    })
-});
-
-/* ============================== POST TITLES ============================ */
-
-var titles = document.querySelectorAll(".box h3");
-
-titles.forEach(e => {
-    e.setAttribute("title", e.innerHTML)
-});
-
-/* ============================== LOADER ANIMATION ============================ */
-
-/* var loader = document.querySelector(".loader");
-
-window.addEventListener("load", () => {
-    setTimeout(() => {
-        loader.style.opacity = "0";
-        loader.style.filter = "brightness(0)";
-        loader.style.pointerEvents = "none";
-    }, 1300);
-}) */
-
-/* ============================== PROFILE ============================ */
-
-var profileBtn = document.querySelector(".profile-btn");
-var profile = document.querySelector(".profile");
-
-profileBtn.addEventListener("click", () => {
-    profile.classList.toggle("show");
-});
-
-window.addEventListener("click", (e) => {
-    if(profile.classList.contains("show") && e.target != profile && e.target != profileBtn)
-        profile.classList.remove("show");
-})
-
-/* ============================== MOBILE PROFILE ============================ */
-
-var mobileProfileBtn = document.querySelector(".profile-btn");
-var mobileProfile = document.querySelector(".mobile-profile");
-var closeMobileProfile = document.querySelector(".close-profile ion-icon");
-
-mobileProfileBtn.addEventListener("click", () => {
-    mobileProfile.classList.add("show");
-    document.body.style.overflow = "hidden";
-});
-
-closeMobileProfile.addEventListener("click", () => {
-    mobileProfile.classList.remove("show");
-    document.body.style.overflow = "auto";
-});
-
-/* ============================== SCROLL NAVBAR ============================ */
-
-/* const body = document.body;
-let lastScroll = 0;
-
-var nav = document.querySelector(".navbar");
-
-window.addEventListener("scroll", () => {
-	const currentScroll = window.pageYOffset;
-    
-
-	if (currentScroll <= 0) {
-		body.classList.remove("scroll-up");
-		return;
-	}
-
-	if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) 
+window.addEventListener("scroll", function() {
+    var nav = document.querySelector('header');
+    if ( window.pageYOffset > 10 ) 
     {
-		body.classList.remove("scroll-up");
-		body.classList.add("scroll-down");
-        //console.log("dole");
-	} 
-    else if ( currentScroll < lastScroll && body.classList.contains("scroll-down")) 
-    {
-		body.classList.remove("scroll-down");
-		body.classList.add("scroll-up");
-        //console.log("gore");
-	}
-	lastScroll = currentScroll;
-});
-let g=112;
-window.addEventListener("scroll", (e)=> {
-    
-    var scrollTop = window.scrollY;
-    let x = scrollTop;
-    
-    if(body.classList.contains("scroll-down"))
-    {
-
-
-        if(x>112)
-            x=112;
-
-        console.log("dole", x);
-           nav.style.transform = "translateY(-" + x + "px)";
-           selector.style.transform = "translateY(-" + x + "px)";
-        if(g<112)
-            g+=0.2;
-    }
-    if(body.classList.contains("scroll-up"))
-    {
-        
-        if(g<0)
-            g=0;
-
-        console.log("gore", g);
-           nav.style.transform = "translateY(-" + g + "px)";
-           selector.style.transform = "translateY(-" + g + "px)";
-           g-=5;
-
-           if(x>0)
-            x+=3;
-    }
-}) */
-
-/* ============================== SEARCH ============================ */
-
-var searchBtn = document.querySelector(".search-icon");
-var backBtn = document.querySelector(".back-icon");
-var search = document.querySelector(".search");
-var searchResults = document.querySelector(".search-results");
-var searchInput = search.querySelector("input");
-var cancelSearchBtn = search.querySelector(".cancel-search");
-var typeInBtn = document.querySelectorAll(".type-in");
-
-searchBtn.addEventListener("click", () => {
-    search.classList.add("open");
-    searchResults.classList.add("open");
-    searchInput.focus();
-    document.body.style.overflow = "hidden";
-});
-
-backBtn.addEventListener("click", () => {
-    search.classList.remove("open");
-    searchResults.classList.remove("open");
-    searchInput.value = "";
-    document.body.style.overflow = "auto";
-    cancelSearchBtn.classList.remove("open");
-});
-
-typeInBtn.forEach(e => {
-    e.addEventListener("click", ()=> {
-        var text = e.previousSibling.previousSibling.innerText;
-
-        searchInput.value = text;
-        searchInput.focus();
-        cancelSearchBtn.classList.add("open");
-    })
-});
-
-searchInput.addEventListener("input", ()=> {
-    if(searchInput.value.length >= 1)
-        cancelSearchBtn.classList.add("open");
+        nav.classList.add("scrolled");
+    } 
     else 
-        cancelSearchBtn.classList.remove("open");
-});
-
-cancelSearchBtn.addEventListener("click", ()=> {
-    searchInput.value = "";
-    searchInput.focus();
-    cancelSearchBtn.classList.remove("open");
-});
-
-/* ============================== MOBILE MENU ACTIVE ============================ */
-
-var mobileMenuList = document.querySelectorAll(".mobile-nav .menu a");
-
-mobileMenuList.forEach(e => {
-    
-    if(e.classList.contains("active"))
     {
-        var t = e.querySelector("ion-icon").getAttribute("name");
-
-        t = t.replace("-outline", "")
-        e.querySelector("ion-icon").setAttribute("name", t);
+        nav.classList.remove("scrolled");
     }
 });
 
-/* ========================================= CREATE ========================================= */
+/* ============================== TO TOP SCROLLED ============================ */
 
-var createBtn = document.querySelector(".create-btn");
-var createModal = document.querySelector(".create");
-
-createBtn.addEventListener("click", ()=> {
-    createBtn.classList.toggle("active");
-    createModal.classList.toggle("active");
-});
-
-document.addEventListener("click", (e)=> {
-    if(e.target != createBtn && e.target != createModal && e.target != createModal.children)
+window.addEventListener("scroll", function() {
+    var top = document.querySelector('.to-top');
+    if ( window.pageYOffset > 300 ) 
     {
-        createBtn.classList.remove("active");
-        createModal.classList.remove("active");
+        top.classList.add("scrolled");
+    } 
+    else 
+    {
+        top.classList.remove("scrolled");
     }
 });
 
-/* ========================================= FAVOURITE ========================================= */
+/* ============================== HAMBURGER ============================ */
 
-var favs = document.querySelectorAll(".post .save ion-icon");
+let hamBtn = document.querySelector(".hamburger");
+let hamburger = document.querySelector(".hamburger-menu");
 
-favs.forEach(fav => {
-    fav.addEventListener("click", ()=> {
-        fav.classList.toggle("add");
+hamBtn.addEventListener("click", () => {
+    hamburger.classList.toggle("open");
+    hamBtn.classList.toggle("open");
+    hamBtn.style.pointerEvents = "none";
 
-        if(fav.classList.contains("add"))
-        {
-            var t = fav.getAttribute("name");
+    if(a==true)
+        document.body.classList.toggle("overflow");
 
-            t = t.replace("-outline", "")
-            fav.setAttribute("name", t);
-        }
+    if(hamburger.classList.contains("open"))
+    {
+        setTimeout(() => {
+            hamBtn.style.pointerEvents = "all";
+        }, 1200);
+    }
+    if(!hamburger.classList.contains("open"))
+    {
+        setTimeout(() => {
+            hamBtn.style.pointerEvents = "all";
+        }, 600);
+    }
 
-        if(!fav.classList.contains("add"))
-        {
-            var t = fav.getAttribute("name");
+});
 
-            t = t + "-outline";
-            fav.setAttribute("name", t);
-        }
+let hamLinks = document.querySelectorAll(".hamburger-menu ul li a");
+
+hamLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        hamburger.classList.toggle("open");
+        hamBtn.classList.toggle("open");
+
+        if(a == true)
+            document.body.classList.toggle("overflow");
     })
 });
 
-/* ========================================= ADS SCROLLING ========================================= */
+/* ============================== CODE FOLLOW ANIMATION ============================ */
 
-const elementIsVisibleInViewport = (el, partiallyVisible = false) => {
-    const { top, left, bottom, right } = el.getBoundingClientRect();
-    const { innerHeight, innerWidth } = window;
-    return partiallyVisible
-      ? ((top > 0 && top < innerHeight) ||
-          (bottom > 0 && bottom < innerHeight)) &&
-          ((left > 0 && left < innerWidth) || (right > 0 && right < innerWidth))
-      : top >= 0 && left >= 0 && bottom <= innerHeight && right <= innerWidth;
-};
+const pre = document.querySelector("pre");
 
-var ads = document.querySelector(".ads-box");
-var dots = document.querySelectorAll(".dot");
-
-ads.addEventListener("scroll", ()=> {
-
-    dots.forEach(dot => {
-        dot.classList.remove("active");
-    });
-
-    if(ads.scrollLeft < 252)
-        dots[0].classList.add("active");
-    else if(ads.scrollLeft < 504)
-        dots[1].classList.add("active");
-    else
-        dots[2].classList.add("active");
-
+document.addEventListener("mousemove", (e) => {
+    rotateElement(e, pre);
 });
 
-/* window.addEventListener("scroll", ()=> {
-    if(elementIsVisibleInViewport(ads, true))
-    {
-        var scrollAds = setInterval(() => {
-        
-            ads.scrollLeft += 250;
-            if(ads.scrollLeft >= 656)
-                ads.scrollLeft=0;
-        
-                console.log("ejo");
-        
-        }, 1000);
-    }
-    else
-        clearInterval(scrollAds);
-})
- */
+function rotateElement(event, element) {
 
-var scrollAds = setInterval(() => {
-        
-    ads.scrollLeft += 250;
-    if(ads.scrollLeft >= 656)
-        ads.scrollLeft=0;
+    const x = event.clientX;
+    const y = event.clientY;
 
-}, 6000);
+    const middleX = window.innerWidth / 2;
+    const middleY = window.innerHeight / 2;
 
-/* ========================================= SWIPE PROFILE ========================================= */
-
-/* let touchstartX = 0
-let touchendX = 0
-
-function checkDirection() {
-    if (touchendX < touchstartX) {
-        mobileProfile.classList.add("show");
-        document.body.style.overflow = "hidden";
-    }
-    if (touchendX > touchstartX) {
-        mobileProfile.classList.remove("show");
-        document.body.style.overflow = "auto";
-    }
+    const offsetX = ((x - middleX) / middleX) * 45;
+    const offsetY = ((y - middleY) / middleY) * 45;
+    
+    element.style.setProperty("--rotateX", offsetX + "deg");
+    element.style.setProperty("--rotateY", -1 * offsetY + "deg");
 }
 
-document.addEventListener('touchstart', e => {
-    touchstartX = e.changedTouches[0].screenX
-})
+/* ============================== FAQ ACCORDITION ============================ */
 
-document.addEventListener('touchend', e => {
-    touchendX = e.changedTouches[0].screenX
-    checkDirection()
-}) */
+let toggles = document.getElementsByClassName('toggle');
+let contentDiv = document.getElementsByClassName('content');
+let icons = document.getElementsByClassName('icon');
 
-/* ============================== AJAX PAGE LOADER ============================ */
+for(let i=0; i<toggles.length; i++){
+    toggles[i].addEventListener('click', ()=>{
+        if( parseInt(contentDiv[i].style.height) != contentDiv[i].scrollHeight){
+            contentDiv[i].style.height = contentDiv[i].scrollHeight + "px";
+            icons[i].classList.remove('fa-plus');
+            icons[i].classList.add('fa-minus');
+        }
+        else{
+            contentDiv[i].style.height = "0px";
+            icons[i].classList.remove('fa-minus');
+            icons[i].classList.add('fa-plus');
+        }
 
-function ajax(url, callback) {
-
-    var xhr = new window.XMLHttpRequest();
-
-    xhr.open("GET", url + "?rel=page", true);
-    xhr.onload = function () {
-        if (xhr.readyState === xhr.DONE && (xhr.status >= 200 && xhr.status < 300)) {
-            if (this.response) {
-                callback.call(this, this.response);
+        for(let j=0; j<contentDiv.length; j++){
+            if(j!==i){
+                contentDiv[j].style.height = "0px";
+                icons[j].classList.remove('fa-minus');
+                icons[j].classList.add('fa-plus');
             }
         }
-    }
-    xhr.send();
+    });
 }
 
-var anchor = document.querySelectorAll("a[rel=page]");
-[].slice.call(anchor).forEach(function (trigger) {
-    trigger.addEventListener("click", function (e) {
-        e.preventDefault();
+/* ============================== EMAIL VALIDATION ============================ */
 
-        var pageUrl = this.getAttribute("href");
+var emailInput = document.querySelector("#email");
+var form = document.querySelector("form");
 
-        ajax(pageUrl, function (data) {
-            document.querySelector("#load").innerHTML = data;
-        });
+var refreshInput;
 
-        if (pageUrl != window.location) {
-            window.history.pushState({ url: pageUrl }, '', pageUrl);
+emailInput.addEventListener("focus", () => {
+    refreshInput = setInterval(() => {
+        
+        var email = document.querySelector("#email").value;
+        var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    
+        if(email.match(pattern))
+        {
+            form.classList.add("success");
+            form.classList.remove("error");
         }
-        return false;
-    })
+        else
+        {
+            form.classList.remove("success");
+            form.classList.add("error");
+        }
+        if(email == "")
+        {
+            form.classList.remove("success");
+            form.classList.remove("error");
+        }
+    }, 50);
 });
 
-window.addEventListener("popstate", function () {
-    ajax(this.window.location.pathname, function (data) {
-        document.querySelector("#load").innerHTML = data;
-    });
+emailInput.addEventListener("blur", () => {
+    clearInterval(refreshInput);
 });
+
+/* ============================== FORM SUBMIT ============================ */
+
+/* form.addEventListener("submit", (e)=> {
+    e.preventDefault();
+}) */
+
+/* ============================== ALERT NOTIFICATION ============================ */
+/* 
+var submitBtn = document.querySelector(".btn.submit");
+var alert = document.querySelector(".alert");
+var closeBtn = document.querySelector(".close-btn");
+
+var nameInput = document.querySelector("#name");
+var subjectInput = document.querySelector("#subject");
+var messageInput = document.querySelector("#message");
+
+submitBtn.addEventListener("click", function(){
+    if(document.querySelector("form").classList.contains("success") && (nameInput.length > 3 || nameInput.length < 20 
+        || !nameInput.value == "") && !subjectInput.value == "" && !messageInput.value == "")
+    {
+        alert.classList.add("show");
+        alert.classList.remove("hide");
+        alert.classList.add("showAlert");
+
+        nameInput.value = "";
+        emailInput.value = "";
+        subjectInput.value = "";
+        messageInput.value = "";
+
+        form.classList.remove("success");
+
+        setTimeout(function(){
+            alert.classList.remove("show");
+            alert.classList.add("hide");
+        },5000);
+    }
+});
+
+closeBtn.addEventListener("click", function(){
+    alert.classList.remove("show");
+    alert.classList.add("hide");
+}); */

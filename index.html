@@ -1,1050 +1,353 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" translate="no">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Compass - Home</title>
+    <title>Petar Plazinić - Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="assets/img/logo-bg.png" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/index.css">
+    <link rel="shortcut icon" href="assets/img/logo-white.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
-   <!--  <div class="loader">
-        <svg class="pl" viewBox="0 0 160 160" width="160px" height="160px" xmlns="http://www.w3.org/2000/svg">
-			<defs>
-				<linearGradient id="grad" x1="0" y1="0" x2="0" y2="1">
-					<stop offset="0%" stop-color="#000"></stop>
-					<stop offset="100%" stop-color="#fff"></stop>
-				</linearGradient>
-				<mask id="mask1">
-					<rect x="0" y="0" width="160" height="160" fill="url(#grad)"></rect>
-				</mask>
-				<mask id="mask2">
-					<rect x="28" y="28" width="104" height="104" fill="url(#grad)"></rect>
-				</mask>
-			</defs>
-			
-			<g>
-				<g class="pl__ring-rotate">
-					<circle class="pl__ring-stroke" cx="80" cy="80" r="72" fill="none" stroke="#35ab07" stroke-width="16" stroke-dasharray="452.39 452.39" stroke-dashoffset="452" stroke-linecap="round" transform="rotate(-45,80,80)"></circle>
-				</g>
-			</g>
-			<g mask="url(#mask1)">
-				<g class="pl__ring-rotate">
-					<circle class="pl__ring-stroke" cx="80" cy="80" r="72" fill="none" stroke="#28f405" stroke-width="16" stroke-dasharray="452.39 452.39" stroke-dashoffset="452" stroke-linecap="round" transform="rotate(-45,80,80)"></circle>
-				</g>
-			</g>
-			
-			<g>
-				<g stroke-width="4" stroke-dasharray="12 12" stroke-dashoffset="12" stroke-linecap="round" transform="translate(80,80)">
-					<polyline class="pl__tick" stroke="hsl(223,10%,90%)" points="0,2 0,14" transform="rotate(-135,0,0) translate(0,40)"></polyline>
-					<polyline class="pl__tick" stroke="hsl(223,10%,90%)" points="0,2 0,14" transform="rotate(-90,0,0) translate(0,40)"></polyline>
-					<polyline class="pl__tick" stroke="hsl(223,10%,90%)" points="0,2 0,14" transform="rotate(-45,0,0) translate(0,40)"></polyline>
-					<polyline class="pl__tick" stroke="hsl(223,10%,90%)" points="0,2 0,14" transform="rotate(0,0,0) translate(0,40)"></polyline>
-					<polyline class="pl__tick" stroke="hsl(223,10%,90%)" points="0,2 0,14" transform="rotate(45,0,0) translate(0,40)"></polyline>
-					<polyline class="pl__tick" stroke="hsl(223,10%,90%)" points="0,2 0,14" transform="rotate(90,0,0) translate(0,40)"></polyline>
-					<polyline class="pl__tick" stroke="hsl(223,10%,90%)" points="0,2 0,14" transform="rotate(135,0,0) translate(0,40)"></polyline>
-					<polyline class="pl__tick" stroke="hsl(223,10%,90%)" points="0,2 0,14" transform="rotate(180,0,0) translate(0,40)"></polyline>
-				</g>
-			</g>
-			<g mask="url(#mask1)">
-				<g stroke-width="4" stroke-dasharray="12 12" stroke-dashoffset="12" stroke-linecap="round" transform="translate(80,80)">
-					<polyline class="pl__tick" stroke="hsl(223,90%,80%)" points="0,2 0,14" transform="rotate(-135,0,0) translate(0,40)"></polyline>
-					<polyline class="pl__tick" stroke="hsl(223,90%,80%)" points="0,2 0,14" transform="rotate(-90,0,0) translate(0,40)"></polyline>
-					<polyline class="pl__tick" stroke="hsl(223,90%,80%)" points="0,2 0,14" transform="rotate(-45,0,0) translate(0,40)"></polyline>
-					<polyline class="pl__tick" stroke="hsl(223,90%,80%)" points="0,2 0,14" transform="rotate(0,0,0) translate(0,40)"></polyline>
-					<polyline class="pl__tick" stroke="hsl(223,90%,80%)" points="0,2 0,14" transform="rotate(45,0,0) translate(0,40)"></polyline>
-					<polyline class="pl__tick" stroke="hsl(223,90%,80%)" points="0,2 0,14" transform="rotate(90,0,0) translate(0,40)"></polyline>
-					<polyline class="pl__tick" stroke="hsl(223,90%,80%)" points="0,2 0,14" transform="rotate(135,0,0) translate(0,40)"></polyline>
-					<polyline class="pl__tick" stroke="hsl(223,90%,80%)" points="0,2 0,14" transform="rotate(180,0,0) translate(0,40)"></polyline>
-				</g>
-			</g>
-			
-			<g>
-				<g transform="translate(64,28)">
-					<g class="pl__arrows" transform="rotate(45,16,52)">
-						<path fill="hsl(3,90%,55%)" d="M17.998,1.506l13.892,43.594c.455,1.426-.56,2.899-1.998,2.899H2.108c-1.437,0-2.452-1.473-1.998-2.899L14.002,1.506c.64-2.008,3.356-2.008,3.996,0Z"></path>
-						<path fill="hsl(223,10%,90%)" d="M14.009,102.499L.109,58.889c-.453-1.421,.559-2.889,1.991-2.889H29.899c1.433,0,2.444,1.468,1.991,2.889l-13.899,43.61c-.638,2.001-3.345,2.001-3.983,0Z"></path>
-					</g>
-				</g>
-			</g>
-			<g mask="url(#mask2)">
-				<g transform="translate(64,28)">
-					<g class="pl__arrows" transform="rotate(45,16,52)">
-						<path fill="hsl(333,90%,55%)" d="M17.998,1.506l13.892,43.594c.455,1.426-.56,2.899-1.998,2.899H2.108c-1.437,0-2.452-1.473-1.998-2.899L14.002,1.506c.64-2.008,3.356-2.008,3.996,0Z"></path>
-						<path fill="hsl(223,90%,80%)" d="M14.009,102.499L.109,58.889c-.453-1.421,.559-2.889,1.991-2.889H29.899c1.433,0,2.444,1.468,1.991,2.889l-13.899,43.61c-.638,2.001-3.345,2.001-3.983,0Z"></path>
-					</g>
-				</g>
-			</g>
-		</svg>
-    </div> -->
-    <div class="mobile-profile">
-        <div class="close-profile">
-            <ion-icon name="close-outline"></ion-icon>
-        </div>
-        <div class="personal">
-            <img src="assets/img/profile.png">
-            <div class="desc">
-                <h2>Petar Plazinic</h2>
-                <p>pplazinic032@gmail.com</p>
-            </div>
-        </div>
-        <div class="edit-profile">Manage Account</div>
-        <div class="line"></div>
+    <div class="hamburger-menu">
         <ul>
-            <li><ion-icon name="diamond-outline"></ion-icon> Premium</li>
-            <li><ion-icon name="shield-checkmark-outline"></ion-icon> Security and data privacy</li>
-            <li><ion-icon name="person-add-outline"></ion-icon> Add account</li>
-        </ul>
-        <div class="line"></div>
-        <ul>
-            <li><ion-icon name="language-outline"></ion-icon> Language</li>
-            <li><ion-icon name="location-outline"></ion-icon> Location</li>
-            <li><ion-icon name="card-outline"></ion-icon> Purchases</li>
-            <li><ion-icon name="log-out-outline"></ion-icon> Log out</li>
-        </ul>
-        <div class="line"></div>
-        <ul>
-            <li><ion-icon name="settings-outline"></ion-icon> Settings</li>
-            <li><ion-icon name="help-circle-outline"></ion-icon> Help and feedback</li>
-        </ul>
-        <div class="line"></div>
-        <div class="filter">
-            <div class="fil left">
-                <p><ion-icon name="moon-outline"></ion-icon>Dark</p>
-            </div>
-            <div class="fil right">
-                <p><ion-icon name="sunny-outline"></ion-icon>Light</p>
-            </div>
-            <div class="marker"></div>
-        </div>
-    </div>
-    <div class="mobile-nav">
-        <ul class="menu">
-            <li><a class="nav-link active"><ion-icon name="home-outline"></ion-icon>Home</a></li>
-            <li><a class="nav-link"><ion-icon name="compass-outline"></ion-icon>Explore</a></li>
-            <li><a><ion-icon name="add-circle" class="center create-btn"></ion-icon></a></li>
-            <li><a class="nav-link"><ion-icon name="chatbox-ellipses-outline"></ion-icon>Messages</a></li>
-            <li><a class="nav-link"><ion-icon name="grid-outline"></ion-icon>Collection</a></li>
+            <li style="--i: 2;"><a href="#home">Home</a></li>
+            <li style="--i: 3;"><a href="#about">About</a></li>
+            <li style="--i: 4;"><a href="#services">Services</a></li>
+            <li style="--i: 6;"><a href="#portfolio">Portfolio</a></li>
+            <li style="--i: 8;"><a href="#contact">Contact</a></li>
         </ul>
     </div>
-    <div class="navbar">
-        <div class="logo">
-            <img src="assets/img/logo.png">
-            <h1>Com<span>pass</span> <sup>RS</sup></h1>
-        </div>
-        <div class="search">
-            <ion-icon name="arrow-back-outline" class="back-icon"></ion-icon>
-            <input type="search" placeholder="Search Codes.." autocapitalize="off">
-            <ion-icon name="search"></ion-icon>
-            <ion-icon name="close-outline" class="cancel-search"></ion-icon>
-        </div>
-        <div class="right">
-            <ion-icon name="search-outline" class="search-icon"></ion-icon>
-            <ion-icon name="add" class="none"></ion-icon>
-            <div class="notifications">
-                <ion-icon name="notifications-outline"></ion-icon>
-                <span class="notification">3</span>
-            </div>
-            <img src="assets/img/profile.png" class="profile-btn">
-            <div class="profile">
-                <div class="personal">
-                    <img src="assets/img/profile.png">
-                    <div class="desc">
-                        <h2>Petar Plazinic</h2>
-                        <p>pplazinic032@gmail.com</p>
-                    </div>
-                </div>
-                <div class="edit-profile">Manage Account</div>
-                <div class="line"></div>
-                <ul>
-                    <li><ion-icon name="diamond-outline"></ion-icon> Premium</li>
-                    <li><ion-icon name="location-outline"></ion-icon> Location</li>
-                    <li><ion-icon name="card-outline"></ion-icon> Monetization</li>
+    <a href="#home" class="to-top">
+        <ion-icon name="arrow-up-outline"></ion-icon>
+    </a>
+    <div class="main-container">
+        <header>
+            <div class="navbar">
+                <a href="#" class="logo">
+                    <img src="assets/img/logo-white.png">
+                </a>
+                <ul class="menu">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact" class="btn">Contact</a></li>
                 </ul>
-                <div class="line"></div>
-                <ul>
-                    <li><ion-icon name="language-outline"></ion-icon> Language</li>
-                    <li><ion-icon name="settings-outline"></ion-icon> Settings</li>
-                    <li><ion-icon name="log-out-outline"></ion-icon> Logout</li>
-                </ul>
-                <div class="line"></div>
-                <div class="filter">
-                    <div class="fil left">
-                        <p>Dark</p>
-                    </div>
-                    <div class="fil right">
-                        <p>Light</p>
-                    </div>
-                    <div class="marker"></div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="search-results">
-        <ul>
-            <li>
-                <span class="material-symbols-outlined">history</span>
-                <p class="title">This is some search that is in one line</p>
-                <span class="material-symbols-outlined type-in">north_west</span>
-            </li>
-            <li>
-                <span class="material-symbols-outlined">history</span>
-                <p class="title">This is the same search result that is just in two lines now</p>
-                <span class="material-symbols-outlined type-in">north_west</span>
-            </li>
-            <li>
-                <span class="material-symbols-outlined">history</span>
-                <p class="title">And this is search result that is so long that goes over two lines so it breaks like this</p>
-                <span class="material-symbols-outlined type-in">north_west</span>
-            </li>
-            <li>
-                <span class="material-symbols-outlined">history</span>
-                <p class="title">This is some search that is in one line</p>
-                <span class="material-symbols-outlined type-in">north_west</span>
-            </li>
-            <li>
-                <span class="material-symbols-outlined">history</span>
-                <p class="title">This is the same search result that is just in two lines now</p>
-                <span class="material-symbols-outlined type-in">north_west</span>
-            </li>
-            <li>
-                <span class="material-symbols-outlined">history</span>
-                <p class="title">And this is search result that is so long that goes over two lines so it breaks like this</p>
-                <span class="material-symbols-outlined type-in">north_west</span>
-            </li>
-        </ul>
-    </div>
-    <div class="create">
-        <h2>Create</h2>
-        <ul>
-            <li><ion-icon name="document-text-outline"></ion-icon> Text document</li>
-            <li><ion-icon name="videocam-outline"></ion-icon> Video recording</li>
-            <li><ion-icon name="cloud-upload-outline"></ion-icon> Upload from device</li>
-        </ul>
-    </div>
-    <div class="sidebar">
-        <ul>
-            <li class="active"><a href="#"><ion-icon name="home-outline"></ion-icon> Home</a></li>
-            <li><a href="#"><ion-icon name="compass-outline"></ion-icon> Explore</a></li>
-            <li><a href="#"><ion-icon name="stats-chart-outline"></ion-icon> Analytics</a></li>
-            <li><a href="#"><ion-icon name="apps-outline"></ion-icon> Collection</a></li>
-        </ul>
-        <div class="line"></div>
-        <ul>
-            <li><a href="#"><ion-icon name="code-slash-outline"></ion-icon> Your codes</a></li>
-            <li><a href="#"><ion-icon name="heart-outline"></ion-icon> Liked</a></li>
-            <li><a href="#"><ion-icon name="bookmark-outline"></ion-icon> Favourites</a></li>
-            <li><a href="#"><ion-icon name="time-outline"></ion-icon> Watch later</a></li>
-        </ul>
-        <div class="line"></div>
-        <h3>Subscriptions</h3>
-        <ul>
-            <li><a href="#"><img src="assets/img/profile.png"> Programer</a></li>
-            <li><a href="#"><img src="assets/img/profile.png"> Programer</a></li>
-            <li><a href="#"><img src="assets/img/profile.png"> Programer</a></li>
-            <li><a href="#"><img src="assets/img/profile.png"> Programer</a></li>
-            <li><a href="#"><ion-icon name="chevron-down-outline"></ion-icon> Show 5 more</a></li>
-        </ul>
-        <div class="line"></div>
-        <h3>Tools</h3>
-        <ul>
-            <li><a href="https://vscode.dev" target="_blank"><img src="assets/img/vscode.png"> VS Code</a></li>
-            <li><a href="#"><img src="assets/img/firebase.png"> Firebase</a></li>
-            <li><a href="#"><img src="assets/img/figma.png"> Figma</a></li>
-            <li><a href="#"><img src="assets/img/gmail.png"> Gmail</a></li>
-        </ul>
-        <div class="line"></div>
-        <ul>
-            <li><a href="#"><ion-icon name="settings-outline"></ion-icon> Settings</a></li>
-            <li><a href="#"><ion-icon name="flag-outline"></ion-icon> Report History</a></li>
-            <li><a href="#"><ion-icon name="help-circle-outline"></ion-icon> Help</a></li>
-            <li><a href="#"><ion-icon name="chatbox-ellipses-outline"></ion-icon> Send Feedback</a></li>
-        </ul>
-        <div class="line"></div>
-        <a href="#" class="credit">About</a>
-        <a href="#" class="credit">Press</a>
-        <a href="#" class="credit">Copyright</a><br>
-        <a href="#" class="credit">Contact us</a>
-        <a href="#" class="credit">Creators</a><br>
-        <a href="#" class="credit">Developers</a>
-        <br><br>
-        <a href="#" class="credit">Terms</a>
-        <a href="#" class="credit">Privacy</a>
-        <a href="#" class="credit">Policy</a><br>
-        <a href="#" class="credit">Cookies</a>
-        <a href="#" class="credit">New features</a>
-        <br><br>
-        <p>© 2023 Compass | PP Production</p>
-    </div>
-    <div class="selector">
-        <i class='fas fa-angle-left icon' id="left"></i>
-        <ul class="tabs-box">
-            <li class="tab active">All</li>
-            <li class="tab">Web Design</li>
-            <li class="tab">HTML</li>
-            <li class="tab">CSS</li>
-            <li class="tab">Web Development</li>
-            <li class="tab">JavaScript</li>
-            <li class="tab">ReactJS</li>
-            <li class="tab">Angular</li>
-            <li class="tab">PHP</li>
-            <li class="tab">SQL</li>
-            <li class="tab">OOP</li>
-            <li class="tab">App Development</li>
-            <li class="tab">Python</li>
-            <li class="tab">C</li>
-            <li class="tab">C#</li>
-            <li class="tab">C++</li>
-            <li class="tab">Objective C</li>
-            <li class="tab">Java</li>
-            <li class="tab">Dart</li>
-            <li class="tab">Firebase</li>
-        </ul>
-        <i class='fas fa-angle-right icon' id="right"></i>
-    </div>
-    <div class="main page active">
-        <div class="ads">
-            <div class="ads-box">
-                <div class="ad">
-                    <div class="left">
-                        <div class="text">
-                            <h2>We are hiring !</h2>
-                            <p>We are looking for a new talents to join us in our ambitious journey !!!</p>
+        </header>
+        
+        <section id="home" class="section-home">
+            <div class="home-content grid">
+                <div class="socials">
+                    <a href="#"><i class='fab fa-instagram'></i></a>
+                    <a href="#"><i class='fab fa-github'></i></a>
+                    <a href="#"><i class='fab fa-codepen'></i></a>
+                </div>
+                <div class="home-data">
+                    <h1 class="home-title" data-shadow="Petar Plazinić">Petar Plazinić</h1>
+                    <h3 class="home-subtitle"><span class="typing"></span></h3>
+                    <p class="home-desc">I’m a web developer with a passion for creating beautiful and functional websites that meet the needs and expectations of my clients.</p>
+                    <div class="buttons">
+                        <a href="#contact" class="btn">Say Hello <ion-icon name="paper-plane-outline"></ion-icon></a>
+                        <div class="youtube">
+                            <a href="#" class="play js-hero-play" style="opacity: 1;">
+                                <div class="play__inner">
+                                    <svg viewBox="0 0 40 40" style="transform: rotate(-90deg);">
+                                        <circle cx="20" cy="20" r="18" fill="none" stroke="#444444" stroke-width="2" class="play__circle"></circle>
+                                        <circle cx="20" cy="20" r="18" fill="none" stroke="#fff" stroke-width="2" class="play__progress"></circle>
+                                    </svg>
+                                </div>
+                            </a>
+                            <p>See more my works on my youtube channel</p>
                         </div>
-                        <a href="#" class="btn">Apply Now</a>
                     </div>
-                    <div class="right">
-                        <img src="assets/img/graphic.png">
-                    </div>
+                    
                 </div>
-                <div class="ad">
-                    <div class="left">
-                        <div class="text">
-                            <h2>Get paid now !</h2>
-                            <p>Monetize your skills, expand your business and make a great future !!!</p>
+                <pre class="language-css" tabindex="0"><code class="language-css"><span class="token selector">.your-website</span> <span class="token punctuation">{</span>
+    <span class="token property">design</span><span class="token punctuation">:</span> awesome<span class="token punctuation">;</span>
+    <span class="token property">responsive</span><span class="token punctuation">:</span> true<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+            </div>
+            <div class="scroll-down">
+                <a href="#about">
+                    <svg width="32px" height="32px" class="home__scroll-mouse" viewBox="0 0 247 390" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="fill-rule: evenodd; clip-rule: evenodd; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 1.5;"><path class="wheel" d="M123.359,79.775l0,72.843" style="fill: none; stroke: var(--title-color); stroke-width: 20px;"></path><path id="mouse" d="M236.717,123.359c0,-62.565 -50.794,-113.359 -113.358,-113.359c-62.565,0 -113.359,50.794 -113.359,113.359l0,143.237c0,62.565 50.794,113.359 113.359,113.359c62.564,0 113.358,-50.794 113.358,-113.359l0,-143.237Z" style="fill: none; stroke: var(--title-color); stroke-width: 20px;"></path></svg>
+                    Scroll Down<ion-icon name="arrow-down-outline"></ion-icon>
+                </a>
+            </div>
+        </section>
+        <section id="about" class="section-about">
+            <h2 class="section-title ">About Me</h2>
+            <span class="section-subtitle ">- My Introduction -</span>
+            <div class="about-content grid">
+                <div class="frame">
+                    <img src="assets/img/myimage.jpg">
+                </div>
+                <div class="about-data">
+                    <div class="about-info grid">
+                        <div class="about-box">
+                            <ion-icon name="time-outline"></ion-icon>
+                            <h3 class="about-title">Experience</h3>
+                            <span class="about-subtitle">4 Years</span>
                         </div>
-                        <a href="#" class="btn">Get started</a>
-                    </div>
-                    <div class="right">
-                        <img src="assets/img/card.png">
-                    </div>
-                </div>
-                <div class="ad">
-                    <div class="left">
-                        <div class="text">
-                            <h2>Share your work</h2>
-                            <p>Let other people appreciate your honest work and help you build a great account !!!</p>
+                        <div class="about-box">
+                            <ion-icon name="briefcase-outline"></ion-icon>
+                            <h3 class="about-title">Projects</h3>
+                            <span class="about-subtitle">15+ Projects</span>
                         </div>
-                        <a href="#" class="btn">QR code</a>
+                        <div class="about-box">
+                            <ion-icon name="person-outline"></ion-icon>
+                            <h3 class="about-title">Clients</h3>
+                            <span class="about-subtitle">20+ Clients</span>
+                        </div>
                     </div>
-                    <div class="right">
-                        <img src="assets/img/qr-code.png">
+                    <p class="about-desc">I'm a <b>Front-End Developer</b> from Serbia with a passion for UI effects, animations, and dynamic user experiences. Experienced in <b>various projects</b>, which honed my skills. <br><br> Well-organised person, <b>problem solver</b>, independent employee with high attention to detail. Fan of Basketball, outdoor activities, TV series and literature.</p>
+                    <a href="#" class="btn">Download CV <ion-icon name="document-text-outline"></ion-icon></a>
+                </div>
+            </div>
+        </section>
+        <section id="services" class="section-services">
+            <h2 class="section-title ">Services</h2>
+            <span class="section-subtitle ">- Few services that I provide -</span>
+            <div class="wrapper">
+                <div class="service ">
+                    <div class="">
+                        <img src="assets/img/responsive.png">
+                        <h3>Responsive Layouts</h3>
+                        <p>Websites work perfectly on all platforms, mobile or desktop.</p>
+                    </div>
+                </div>
+                <div class="service ">
+                    <div class="">
+                        <img src="assets/img/seo.png">
+                        <h3>SEO OPTIMIZATION</h3>
+                        <p>Target audience will find your site and services on Google.</p>
+                    </div>
+                </div>
+                <div class="service ">
+                    <div class="">
+                        <img src="assets/img/performance.png">
+                        <h3>HIGH PERFORMANCE</h3>
+                        <p>Website is optimized to load quickly and offer a great user experience.</p>
                     </div>
                 </div>
             </div>
-            <div class="dots">
-                <div class="dot active"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
+        </section>
+        <section id="skills" class="section-skills">
+            <h2 class="section-title ">Skills</h2>
+            <span class="section-subtitle ">- An overview of my technical skills -</span>
+            <div class="skills-content grid">
+                <span class="skills-desc">For over <b>four years</b> I had many opportunities to work in a vast spectrum of web tehnologies what let me gather a significant amount of <b>various experience</b>. Working for companies and individuals around the Serbia I met and learnt from amazing and ambitious people. <br><br> I have completed many <b>programming courses</b> that expanded my knowledge in this field of IT, and day after day i try to be better at what i do.</span>
+                <div class="skills-info grid">
+                    <div class="skill-box">
+                        <img src="assets/img/html-5.png">
+                        <span class="skill-subtitle">HTML</span> 
+                    </div>
+                    <div class="skill-box">
+                        <img src="assets/img/css-3.png">
+                        <span class="skill-subtitle">CSS</span> 
+                    </div>
+                    <div class="skill-box">
+                        <img src="assets/img/js.png">
+                        <span class="skill-subtitle">JavaScript</span> 
+                    </div>
+                    <div class="skill-box">
+                        <img src="assets/img/figma.png">
+                        <span class="skill-subtitle">Figma</span> 
+                    </div>
+                    <div class="skill-box">
+                        <img src="assets/img/webflow.png">
+                        <span class="skill-subtitle">Webflow</span> 
+                    </div>
+                    <div class="skill-box">
+                        <img src="assets/img/firebase.png">
+                        <span class="skill-subtitle">Firebase</span> 
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="post">
-            <div class="top">
-                <div class="info">
+        </section>
+        <section id="portfolio" class="section-portfolio">
+            <h2 class="section-title ">Portfolio</h2>
+            <span class="section-subtitle ">- A small gallery of recent projects -</span>
+            <div class="projects">
+                <div class="project ">
                     <div class="img-wrapper">
-                        <img src="assets/img/google.png">
+                        <img src="assets/img/project4.png">
                     </div>
-                    <div class="title">
-                        <h3>
-                            <div class="name">Google<span class="material-symbols-outlined verified">verified</span></div>
-                            <span>| Today</span>
-                        </h3>
-                        <h2>Frontend Developer</h2>
-                        <h4>Belgrade, Serbia</h4>
+                    <a class="title">Weather App</a>
+                    <div class="tags">
+                        <p class="tag">HTML</p>
+                        <p class="tag">CSS</p>
+                        <p class="tag">JavaScript</p>
+                    </div>
+                    <p class="description">With real-time data updates, this app can provide accurate weather information for any location across the world.</p>
+                    <div class="buttons">
+                        <a href="#" target="_blank" class="code"><ion-icon name="code-slash"></ion-icon></a>
+                        <a href="projects/Coffee/index.html" target="_blank" class="btn">View Live</a>
                     </div>
                 </div>
-                <div class="save">
-                    <ion-icon name="bookmark-outline"></ion-icon>
-                </div>
-            </div>
-            <div class="tags">
-                <div class="tag">Junior</div>
-                <div class="tag">Part Time</div>
-                <div class="tag">Remote</div>
-            </div>
-            <div class="text">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est voluptatum eligendi aperiam. Minima quos rem aspernatur, ducimus fugiat saepe laborum, asperiores numquam dolores blanditiis officia voluptates tempore quidem ullam harum?</p>
-                <div class="wage">$150k</div>
-            </div>
-        </div>
-        <div class="post">
-            <div class="top">
-                <div class="info">
+                <div class="project ">
                     <div class="img-wrapper">
-                        <img src="assets/img/google.png">
+                        <img src="assets/img/project2.png">
                     </div>
-                    <div class="title">
-                        <h3>
-                            <div class="name">Google<span class="material-symbols-outlined verified">verified</span></div>
-                            <span>| Today</span>
-                        </h3>
-                        <h2>Frontend Developer</h2>
-                        <h4>Belgrade, Serbia</h4>
+                    <a class="title">Tic Tac Toe</a>
+                    <div class="tags">
+                        <p class="tag">HTML</p>
+                        <p class="tag">CSS</p>
+                        <p class="tag">JavaScript</p>
+                    </div>
+                    <p class="description">Experience the classic game of Tic Tac Toe in a sleek and user-friendly interface. Test your skills against the computer and win !!</p>
+                    <div class="buttons">
+                        <a href="#" target="_blank" class="code"><ion-icon name="code-slash"></ion-icon></a>
+                        <a href="projects/TicTacToe/tictactoe.html" target="_blank" class="btn">View Live</a>
                     </div>
                 </div>
-                <div class="save">
-                    <ion-icon name="bookmark-outline"></ion-icon>
-                </div>
-            </div>
-            <div class="tags">
-                <div class="tag">Junior</div>
-                <div class="tag">Part Time</div>
-                <div class="tag">Remote</div>
-            </div>
-            <div class="text">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est voluptatum eligendi aperiam. Minima quos rem aspernatur, ducimus fugiat saepe laborum, asperiores numquam dolores blanditiis officia voluptates tempore quidem ullam harum?</p>
-                <div class="wage">$150k</div>
-            </div>
-        </div>
-        <div class="post">
-            <div class="top">
-                <div class="info">
+                <div class="project ">
                     <div class="img-wrapper">
-                        <img src="assets/img/google.png">
+                        <img src="assets/img/project5.png">
                     </div>
-                    <div class="title">
-                        <h3>
-                            <div class="name">Google<span class="material-symbols-outlined verified">verified</span></div>
-                            <span>| Today</span>
-                        </h3>
-                        <h2>Frontend Developer</h2>
-                        <h4>Belgrade, Serbia</h4>
+                    <a class="title">Drawing App</a>
+                    <div class="tags">
+                        <p class="tag">HTML</p>
+                        <p class="tag">CSS</p>
+                        <p class="tag">JavaScript</p>
                     </div>
-                </div>
-                <div class="save">
-                    <ion-icon name="bookmark-outline"></ion-icon>
-                </div>
-            </div>
-            <div class="tags">
-                <div class="tag">Junior</div>
-                <div class="tag">Part Time</div>
-                <div class="tag">Remote</div>
-            </div>
-            <div class="text">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est voluptatum eligendi aperiam. Minima quos rem aspernatur, ducimus fugiat saepe laborum, asperiores numquam dolores blanditiis officia voluptates tempore quidem ullam harum?</p>
-                <div class="wage">$150k</div>
-            </div>
-        </div>
-        <div class="post">
-            <div class="top">
-                <div class="info">
-                    <div class="img-wrapper">
-                        <img src="assets/img/google.png">
-                    </div>
-                    <div class="title">
-                        <h3>
-                            <div class="name">Google<span class="material-symbols-outlined verified">verified</span></div>
-                            <span>| Today</span>
-                        </h3>
-                        <h2>Frontend Developer</h2>
-                        <h4>Belgrade, Serbia</h4>
+                    <p class="description">Unleash your artistic talent with this user-friendly app that offers a variety of drawing tools and a vibrant color palette.</p>
+                    <div class="buttons">
+                        <a href="#" target="_blank" class="code"><ion-icon name="code-slash"></ion-icon></a>
+                        <a href="projects/Typing/index.html" target="_blank" class="btn">View Live</a>
                     </div>
                 </div>
-                <div class="save">
-                    <ion-icon name="bookmark-outline"></ion-icon>
+            </div>
+        </section>
+        <section id="faq" class="section-faq">
+            <h2 class="section-title ">FAQ</h2>
+            <span class="section-subtitle ">- Most frequently asked questions -</span>
+            <div class="faq-content grid">
+                <div class="levo">
+                    <img src="assets/img/faq.png">
                 </div>
-            </div>
-            <div class="tags">
-                <div class="tag">Junior</div>
-                <div class="tag">Part Time</div>
-                <div class="tag">Remote</div>
-            </div>
-            <div class="text">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est voluptatum eligendi aperiam. Minima quos rem aspernatur, ducimus fugiat saepe laborum, asperiores numquam dolores blanditiis officia voluptates tempore quidem ullam harum?</p>
-                <div class="wage">$150k</div>
-            </div>
-        </div>
-        <div class="post">
-            <div class="top">
-                <div class="info">
-                    <div class="img-wrapper">
-                        <img src="assets/img/google.png">
+                <div class="desno">
+                    <div class="wrapper ">
+                        <button class="toggle">How much do you charge ?<i class="fas fa-plus icon"></i></button>
+                        <div class="content">
+                        <p>As a freelancer, my rates may vary depending on the specific project requirements, complexity, and timeline. I typically charge an hourly rate or a project-based fee.</p>
                     </div>
-                    <div class="title">
-                        <h3>
-                            <div class="name">Google<span class="material-symbols-outlined verified">verified</span></div>
-                            <span>| Today</span>
-                        </h3>
-                        <h2>Frontend Developer</h2>
-                        <h4>Belgrade, Serbia</h4>
                     </div>
-                </div>
-                <div class="save">
-                    <ion-icon name="bookmark-outline"></ion-icon>
-                </div>
-            </div>
-            <div class="tags">
-                <div class="tag">Junior</div>
-                <div class="tag">Part Time</div>
-                <div class="tag">Remote</div>
-            </div>
-            <div class="text">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est voluptatum eligendi aperiam. Minima quos rem aspernatur, ducimus fugiat saepe laborum, asperiores numquam dolores blanditiis officia voluptates tempore quidem ullam harum?</p>
-                <div class="wage">$150k</div>
-            </div>
-        </div>
-        <div class="post">
-            <div class="top">
-                <div class="info">
-                    <div class="img-wrapper">
-                        <img src="assets/img/google.png">
+                    <div class="wrapper ">
+                        <button class="toggle">Do you offer hosting services ?<i class="fas fa-plus icon"></i></button>
+                        <div class="content">
+                        <p>While I do not provide website hosting or domain registration services myself, I can recommend reliable hosting providers and help you set up your hosting account.</p>
                     </div>
-                    <div class="title">
-                        <h3>
-                            <div class="name">Google<span class="material-symbols-outlined verified">verified</span></div>
-                            <span>| Today</span>
-                        </h3>
-                        <h2>Frontend Developer</h2>
-                        <h4>Belgrade, Serbia</h4>
+                    </div>
+                    <div class="wrapper ">
+                        <button class="toggle">Do you pay taxes on income ?<i class="fas fa-plus icon"></i></button>
+                        <div class="content">
+                        <p>Yes, as a freelance web developer, it is important to pay taxes on your income. In most countries, freelance income is considered self-employment income and is taxable.</p>
+                    </div>
+                    </div>
+                    <div class="wrapper ">
+                        <button class="toggle">How can I pay you ?<i class="fas fa-plus icon"></i></button>
+                        <div class="content">
+                        <p>There are a few payment options currently available. The most common include bank transfers, online payment platforms such as PayPal or Stripe, and also via Upwork.</p>
+                    </div>
                     </div>
                 </div>
-                <div class="save">
-                    <ion-icon name="bookmark-outline"></ion-icon>
-                </div>
             </div>
-            <div class="tags">
-                <div class="tag">Junior</div>
-                <div class="tag">Part Time</div>
-                <div class="tag">Remote</div>
-            </div>
-            <div class="text">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est voluptatum eligendi aperiam. Minima quos rem aspernatur, ducimus fugiat saepe laborum, asperiores numquam dolores blanditiis officia voluptates tempore quidem ullam harum?</p>
-                <div class="wage">$150k</div>
-            </div>
-        </div>
-        <div class="post">
-            <div class="top">
-                <div class="info">
-                    <div class="img-wrapper">
-                        <img src="assets/img/google.png">
-                    </div>
-                    <div class="title">
-                        <h3>
-                            <div class="name">Google<span class="material-symbols-outlined verified">verified</span></div>
-                            <span>| Today</span>
-                        </h3>
-                        <h2>Frontend Developer</h2>
-                        <h4>Belgrade, Serbia</h4>
+        </section>
+        <section id="contact" class="section-contact">
+            <h2 class="section-title ">Contact</h2>
+            <span class="section-subtitle ">- Get in touch with me -</span>
+            <div class="contact-content grid">
+                <div class="left ">
+                    <div class="contact-info">
+                        <a href="#" class="contact-card">
+                            <ion-icon name="mail-outline"></ion-icon>
+                            <h3 class="contact-card-title">Email</h3>
+                            <span class="contact-card-data">pplazinic032@gmail.com</span>
+                        </a>
+                        <a href="#" class="contact-card">
+                            <ion-icon name="call-outline"></ion-icon>
+                            <h3 class="contact-card-title">Phone</h3>
+                            <span class="contact-card-data">065 3238025</span>
+                        </a>
+                        <a href="#" class="contact-card">
+                            <ion-icon name="location-outline"></ion-icon>
+                            <h3 class="contact-card-title">Location</h3>
+                            <span class="contact-card-data">Čačak, Serbia</span>
+                        </a>
                     </div>
                 </div>
-                <div class="save">
-                    <ion-icon name="bookmark-outline"></ion-icon>
-                </div>
-            </div>
-            <div class="tags">
-                <div class="tag">Junior</div>
-                <div class="tag">Part Time</div>
-                <div class="tag">Remote</div>
-            </div>
-            <div class="text">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est voluptatum eligendi aperiam. Minima quos rem aspernatur, ducimus fugiat saepe laborum, asperiores numquam dolores blanditiis officia voluptates tempore quidem ullam harum?</p>
-                <div class="wage">$150k</div>
-            </div>
-        </div>
-        <div class="post">
-            <div class="top">
-                <div class="info">
-                    <div class="img-wrapper">
-                        <img src="assets/img/google.png">
-                    </div>
-                    <div class="title">
-                        <h3>
-                            <div class="name">Google<span class="material-symbols-outlined verified">verified</span></div>
-                            <span>| Today</span>
-                        </h3>
-                        <h2>Frontend Developer</h2>
-                        <h4>Belgrade, Serbia</h4>
-                    </div>
-                </div>
-                <div class="save">
-                    <ion-icon name="bookmark-outline"></ion-icon>
-                </div>
-            </div>
-            <div class="tags">
-                <div class="tag">Junior</div>
-                <div class="tag">Part Time</div>
-                <div class="tag">Remote</div>
-            </div>
-            <div class="text">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est voluptatum eligendi aperiam. Minima quos rem aspernatur, ducimus fugiat saepe laborum, asperiores numquam dolores blanditiis officia voluptates tempore quidem ullam harum?</p>
-                <div class="wage">$150k</div>
-            </div>
-        </div>
-        <div class="post">
-            <div class="top">
-                <div class="info">
-                    <div class="img-wrapper">
-                        <img src="assets/img/google.png">
-                    </div>
-                    <div class="title">
-                        <h3>
-                            <div class="name">Google<span class="material-symbols-outlined verified">verified</span></div>
-                            <span>| Today</span>
-                        </h3>
-                        <h2>Frontend Developer</h2>
-                        <h4>Belgrade, Serbia</h4>
+                <div class="right">
+                    <div class="form-wrapper">
+                        <form  method="post" action="https://formspree.io/f/xayzezwp">
+                            <div class="flex">
+                                <div class="input-field ">
+                                    <input type="text" name="Name" id="name" autocomplete="off" spellcheck="false" placeholder="Name" title="">
+                                </div>
+                                <div class="input-field ">
+                                    <input type="email" name="Email" id="email" autocomplete="off" spellcheck="false" placeholder="Email" title="">
+                                    <span class="material-symbols-outlined green">check_circle</span>
+                                    <span class="material-symbols-outlined red">error</span>
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="input-field ">
+                                    <input type="text" name="Subject" id="subject" autocomplete="off" spellcheck="false" placeholder="Subject" title="">
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="input-field " style="height: 150px;">
+                                    <textarea id="message" name="Message" cols="30" rows="10" autocomplete="off" spellcheck="false" placeholder="Message" title=""></textarea>
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="input-field ">
+                                    <button type="submit" class="btn submit">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
-                <div class="save">
-                    <ion-icon name="bookmark-outline"></ion-icon>
+            </div>
+        </section>
+        
+    </div>
+    <div class="footer">
+        <div class="padding ">
+            <h1>Petar Plazinić</h1>
+            <div class="row">
+                <div class="about">
+                    <p>2023 © All Rights Reserved</p>
+                    <p>Contact Me: <a href="mailto: pplazinic032@gmail.com">pplazinic032@gmail.com</a></p>
                 </div>
-            </div>
-            <div class="tags">
-                <div class="tag">Junior</div>
-                <div class="tag">Part Time</div>
-                <div class="tag">Remote</div>
-            </div>
-            <div class="text">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est voluptatum eligendi aperiam. Minima quos rem aspernatur, ducimus fugiat saepe laborum, asperiores numquam dolores blanditiis officia voluptates tempore quidem ullam harum?</p>
-                <div class="wage">$150k</div>
-            </div>
-        </div>
-        <div class="post">
-            <div class="top">
-                <div class="info">
-                    <div class="img-wrapper">
-                        <img src="assets/img/google.png">
-                    </div>
-                    <div class="title">
-                        <h3>
-                            <div class="name">Google<span class="material-symbols-outlined verified">verified</span></div>
-                            <span>| Today</span>
-                        </h3>
-                        <h2>Frontend Developer</h2>
-                        <h4>Belgrade, Serbia</h4>
+                <div class="socials">
+                    <h3>Follow Me</h3>
+                    <div class="icon-box">
+                        <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                        <a href="https://www.instagram.com/pplazinic/" target="_blank"><i class='fab fa-instagram'></i></a>
+                        <a href="https://www.upwork.com/freelancers/~01e2b9ce005f36e107" target="_blank"><img src="assets/img/upwork.png"></a>
+                        <a href="https://www.youtube.com/channel/UCntvGDrkgMDoGHjp4eL2i8w" target="_blank"><ion-icon name="logo-youtube"></ion-icon></a>
                     </div>
                 </div>
-                <div class="save">
-                    <ion-icon name="bookmark-outline"></ion-icon>
-                </div>
-            </div>
-            <div class="tags">
-                <div class="tag">Junior</div>
-                <div class="tag">Part Time</div>
-                <div class="tag">Remote</div>
-            </div>
-            <div class="text">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est voluptatum eligendi aperiam. Minima quos rem aspernatur, ducimus fugiat saepe laborum, asperiores numquam dolores blanditiis officia voluptates tempore quidem ullam harum?</p>
-                <div class="wage">$150k</div>
-            </div>
-        </div>
-        <div class="post">
-            <div class="top">
-                <div class="info">
-                    <div class="img-wrapper">
-                        <img src="assets/img/google.png">
-                    </div>
-                    <div class="title">
-                        <h3>
-                            <div class="name">Google<span class="material-symbols-outlined verified">verified</span></div>
-                            <span>| Today</span>
-                        </h3>
-                        <h2>Frontend Developer</h2>
-                        <h4>Belgrade, Serbia</h4>
-                    </div>
-                </div>
-                <div class="save">
-                    <ion-icon name="bookmark-outline"></ion-icon>
-                </div>
-            </div>
-            <div class="tags">
-                <div class="tag">Junior</div>
-                <div class="tag">Part Time</div>
-                <div class="tag">Remote</div>
-            </div>
-            <div class="text">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est voluptatum eligendi aperiam. Minima quos rem aspernatur, ducimus fugiat saepe laborum, asperiores numquam dolores blanditiis officia voluptates tempore quidem ullam harum?</p>
-                <div class="wage">$150k</div>
-            </div>
-        </div>
-        <div class="post">
-            <div class="top">
-                <div class="info">
-                    <div class="img-wrapper">
-                        <img src="assets/img/google.png">
-                    </div>
-                    <div class="title">
-                        <h3>
-                            <div class="name">Google<span class="material-symbols-outlined verified">verified</span></div>
-                            <span>| Today</span>
-                        </h3>
-                        <h2>Frontend Developer</h2>
-                        <h4>Belgrade, Serbia</h4>
-                    </div>
-                </div>
-                <div class="save">
-                    <ion-icon name="bookmark-outline"></ion-icon>
-                </div>
-            </div>
-            <div class="tags">
-                <div class="tag">Junior</div>
-                <div class="tag">Part Time</div>
-                <div class="tag">Remote</div>
-            </div>
-            <div class="text">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est voluptatum eligendi aperiam. Minima quos rem aspernatur, ducimus fugiat saepe laborum, asperiores numquam dolores blanditiis officia voluptates tempore quidem ullam harum?</p>
-                <div class="wage">$150k</div>
-            </div>
-        </div>
-        <div class="post">
-            <div class="top">
-                <div class="info">
-                    <div class="img-wrapper">
-                        <img src="assets/img/google.png">
-                    </div>
-                    <div class="title">
-                        <h3>
-                            <div class="name">Google<span class="material-symbols-outlined verified">verified</span></div>
-                            <span>| Today</span>
-                        </h3>
-                        <h2>Frontend Developer</h2>
-                        <h4>Belgrade, Serbia</h4>
-                    </div>
-                </div>
-                <div class="save">
-                    <ion-icon name="bookmark-outline"></ion-icon>
-                </div>
-            </div>
-            <div class="tags">
-                <div class="tag">Junior</div>
-                <div class="tag">Part Time</div>
-                <div class="tag">Remote</div>
-            </div>
-            <div class="text">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est voluptatum eligendi aperiam. Minima quos rem aspernatur, ducimus fugiat saepe laborum, asperiores numquam dolores blanditiis officia voluptates tempore quidem ullam harum?</p>
-                <div class="wage">$150k</div>
-            </div>
-        </div>
-        <div class="post">
-            <div class="top">
-                <div class="info">
-                    <div class="img-wrapper">
-                        <img src="assets/img/google.png">
-                    </div>
-                    <div class="title">
-                        <h3>
-                            <div class="name">Google<span class="material-symbols-outlined verified">verified</span></div>
-                            <span>| Today</span>
-                        </h3>
-                        <h2>Frontend Developer</h2>
-                        <h4>Belgrade, Serbia</h4>
-                    </div>
-                </div>
-                <div class="save">
-                    <ion-icon name="bookmark-outline"></ion-icon>
-                </div>
-            </div>
-            <div class="tags">
-                <div class="tag">Junior</div>
-                <div class="tag">Part Time</div>
-                <div class="tag">Remote</div>
-            </div>
-            <div class="text">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est voluptatum eligendi aperiam. Minima quos rem aspernatur, ducimus fugiat saepe laborum, asperiores numquam dolores blanditiis officia voluptates tempore quidem ullam harum?</p>
-                <div class="wage">$150k</div>
-            </div>
-        </div>
-        <div class="post">
-            <div class="top">
-                <div class="info">
-                    <div class="img-wrapper">
-                        <img src="assets/img/google.png">
-                    </div>
-                    <div class="title">
-                        <h3>
-                            <div class="name">Google<span class="material-symbols-outlined verified">verified</span></div>
-                            <span>| Today</span>
-                        </h3>
-                        <h2>Frontend Developer</h2>
-                        <h4>Belgrade, Serbia</h4>
-                    </div>
-                </div>
-                <div class="save">
-                    <ion-icon name="bookmark-outline"></ion-icon>
-                </div>
-            </div>
-            <div class="tags">
-                <div class="tag">Junior</div>
-                <div class="tag">Part Time</div>
-                <div class="tag">Remote</div>
-            </div>
-            <div class="text">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est voluptatum eligendi aperiam. Minima quos rem aspernatur, ducimus fugiat saepe laborum, asperiores numquam dolores blanditiis officia voluptates tempore quidem ullam harum?</p>
-                <div class="wage">$150k</div>
-            </div>
-        </div>
-        <div class="post">
-            <div class="top">
-                <div class="info">
-                    <div class="img-wrapper">
-                        <img src="assets/img/google.png">
-                    </div>
-                    <div class="title">
-                        <h3>
-                            <div class="name">Google<span class="material-symbols-outlined verified">verified</span></div>
-                            <span>| Today</span>
-                        </h3>
-                        <h2>Frontend Developer</h2>
-                        <h4>Belgrade, Serbia</h4>
-                    </div>
-                </div>
-                <div class="save">
-                    <ion-icon name="bookmark-outline"></ion-icon>
-                </div>
-            </div>
-            <div class="tags">
-                <div class="tag">Junior</div>
-                <div class="tag">Part Time</div>
-                <div class="tag">Remote</div>
-            </div>
-            <div class="text">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est voluptatum eligendi aperiam. Minima quos rem aspernatur, ducimus fugiat saepe laborum, asperiores numquam dolores blanditiis officia voluptates tempore quidem ullam harum?</p>
-                <div class="wage">$150k</div>
-            </div>
-        </div>
-        <div class="post">
-            <div class="top">
-                <div class="info">
-                    <div class="img-wrapper">
-                        <img src="assets/img/google.png">
-                    </div>
-                    <div class="title">
-                        <h3>
-                            <div class="name">Google<span class="material-symbols-outlined verified">verified</span></div>
-                            <span>| Today</span>
-                        </h3>
-                        <h2>Frontend Developer</h2>
-                        <h4>Belgrade, Serbia</h4>
-                    </div>
-                </div>
-                <div class="save">
-                    <ion-icon name="bookmark-outline"></ion-icon>
-                </div>
-            </div>
-            <div class="tags">
-                <div class="tag">Junior</div>
-                <div class="tag">Part Time</div>
-                <div class="tag">Remote</div>
-            </div>
-            <div class="text">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est voluptatum eligendi aperiam. Minima quos rem aspernatur, ducimus fugiat saepe laborum, asperiores numquam dolores blanditiis officia voluptates tempore quidem ullam harum?</p>
-                <div class="wage">$150k</div>
-            </div>
-        </div>
-        <div class="post">
-            <div class="top">
-                <div class="info">
-                    <div class="img-wrapper">
-                        <img src="assets/img/google.png">
-                    </div>
-                    <div class="title">
-                        <h3>
-                            <div class="name">Google<span class="material-symbols-outlined verified">verified</span></div>
-                            <span>| Today</span>
-                        </h3>
-                        <h2>Frontend Developer</h2>
-                        <h4>Belgrade, Serbia</h4>
-                    </div>
-                </div>
-                <div class="save">
-                    <ion-icon name="bookmark-outline"></ion-icon>
-                </div>
-            </div>
-            <div class="tags">
-                <div class="tag">Junior</div>
-                <div class="tag">Part Time</div>
-                <div class="tag">Remote</div>
-            </div>
-            <div class="text">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est voluptatum eligendi aperiam. Minima quos rem aspernatur, ducimus fugiat saepe laborum, asperiores numquam dolores blanditiis officia voluptates tempore quidem ullam harum?</p>
-                <div class="wage">$150k</div>
-            </div>
-        </div>
-        <div class="post">
-            <div class="top">
-                <div class="info">
-                    <div class="img-wrapper">
-                        <img src="assets/img/google.png">
-                    </div>
-                    <div class="title">
-                        <h3>
-                            <div class="name">Google<span class="material-symbols-outlined verified">verified</span></div>
-                            <span>| Today</span>
-                        </h3>
-                        <h2>Frontend Developer</h2>
-                        <h4>Belgrade, Serbia</h4>
-                    </div>
-                </div>
-                <div class="save">
-                    <ion-icon name="bookmark-outline"></ion-icon>
-                </div>
-            </div>
-            <div class="tags">
-                <div class="tag">Junior</div>
-                <div class="tag">Part Time</div>
-                <div class="tag">Remote</div>
-            </div>
-            <div class="text">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est voluptatum eligendi aperiam. Minima quos rem aspernatur, ducimus fugiat saepe laborum, asperiores numquam dolores blanditiis officia voluptates tempore quidem ullam harum?</p>
-                <div class="wage">$150k</div>
-            </div>
-        </div>
-        <div class="post">
-            <div class="top">
-                <div class="info">
-                    <div class="img-wrapper">
-                        <img src="assets/img/google.png">
-                    </div>
-                    <div class="title">
-                        <h3>
-                            <div class="name">Google<span class="material-symbols-outlined verified">verified</span></div>
-                            <span>| Today</span>
-                        </h3>
-                        <h2>Frontend Developer</h2>
-                        <h4>Belgrade, Serbia</h4>
-                    </div>
-                </div>
-                <div class="save">
-                    <ion-icon name="bookmark-outline"></ion-icon>
-                </div>
-            </div>
-            <div class="tags">
-                <div class="tag">Junior</div>
-                <div class="tag">Part Time</div>
-                <div class="tag">Remote</div>
-            </div>
-            <div class="text">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est voluptatum eligendi aperiam. Minima quos rem aspernatur, ducimus fugiat saepe laborum, asperiores numquam dolores blanditiis officia voluptates tempore quidem ullam harum?</p>
-                <div class="wage">$150k</div>
             </div>
         </div>
     </div>
-    <div class="explore page">
-        <h1>SECTION 2</h1>
-    </div>
-    <div class="messages page">
-        <h1>SECTION 4</h1>
-    </div>
-    <div class="collection page">
-        <div class="row">
-            <div class="top">
-                <div class="title">
-                    <ion-icon name="briefcase"></ion-icon>
-                    <h3>Proposed</h3>
-                </div>
-                <p class="show-all">Show all</p>
-            </div>
-            <div class="post-collection">
-                <div class="saved-post">
-                    <div class="info">
-                        <img src="assets/img/google.png">
-                        <h3>
-                            <div class="name">Google<span class="material-symbols-outlined verified">verified</span></div>
-                            <p>13 hours ago</p>
-                        </h3>
-                    </div>
-                    <div class="bar">
-                        <div class="fill"></div>
-                        <div class="perc">75%</div>
-                    </div>
-                </div>
-                <div class="saved-post">
-                    <div class="info">
-                        <img src="assets/img/google.png">
-                        <h3>
-                            <div class="name">Google<span class="material-symbols-outlined verified">verified</span></div>
-                            <p>13 hours ago</p>
-                        </h3>
-                    </div>
-                    <div class="bar">
-                        <div class="fill"></div>
-                        <div class="perc">75%</div>
-                    </div>
-                </div>
-                <div class="saved-post">
-                    <div class="info">
-                        <img src="assets/img/google.png">
-                        <h3>
-                            <div class="name">Google<span class="material-symbols-outlined verified">verified</span></div>
-                            <p>13 hours ago</p>
-                        </h3>
-                    </div>
-                    <div class="bar">
-                        <div class="fill"></div>
-                        <div class="perc">75%</div>
-                    </div>
-                </div>
-                <div class="saved-post">
-                    <div class="info">
-                        <img src="assets/img/google.png">
-                        <h3>
-                            <div class="name">Google<span class="material-symbols-outlined verified">verified</span></div>
-                            <p>13 hours ago</p>
-                        </h3>
-                    </div>
-                    <div class="bar">
-                        <div class="fill"></div>
-                        <div class="perc">75%</div>
-                    </div>
-                </div>
-                <div class="saved-post">
-                    <div class="info">
-                        <img src="assets/img/google.png">
-                        <h3>
-                            <div class="name">Google<span class="material-symbols-outlined verified">verified</span></div>
-                            <p>13 hours ago</p>
-                        </h3>
-                    </div>
-                    <div class="bar">
-                        <div class="fill"></div>
-                        <div class="perc">75%</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="line"></div>
-        <div class="row">
-            <div class="top">
-                <div class="title">
-                    <ion-icon name="bookmark"></ion-icon>
-                    <h3>Favourites</h3>
-                </div>
-                <p class="show-all">Show all</p>
-            </div>
-            <div class="post-collection">
-                <div class="saved-post">
 
-                </div>
-                <div class="saved-post">
-
-                </div>
-                <div class="saved-post">
-
-                </div>
-                <div class="saved-post">
-
-                </div>
-            </div>
-        </div>
-        <div class="line"></div>
-    </div>
-
-    
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/cdn.js"></script>
+
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 </body>
 </html>
