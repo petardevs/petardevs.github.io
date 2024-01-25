@@ -1,4 +1,4 @@
-var tabs = document.querySelectorAll(".w-tab-link");
+/* var tabs = document.querySelectorAll(".w-tab-link");
 var backBtn = document.querySelector(".back-icon");
 var tabContent = document.querySelector(".w-tab-content");
 
@@ -27,4 +27,4 @@ backBtn.addEventListener("click", ()=> {
    });
    backBtn.style.display = "none";
    tabContent.style.display = "none";
-});
+}); */
