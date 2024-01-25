@@ -2754,58 +2754,22 @@ textarea.w-input, textarea.w-select {
   margin-bottom: 30px;
 }
 
-.tab-link-tab-1 {
+.w-tab-link {
   background-color: rgba(103, 64, 64, 0);
   margin-right: 10px;
   padding-left: 35px;
   padding-right: 35px;
+  -webkit-user-drag: none;
 }
 
-.tab-link-tab-1.w--current {
-  border: 2px solid var(--main-color);
+.w-tab-link.w--current {
+  outline: 2px solid var(--main-color);
   background-color: rgba(137, 20, 20, 0);
   border-radius: 30px;
   padding-left: 35px;
   padding-right: 35px;
 }
 
-.tab-link-tab-2 {
-  background-color: rgba(221, 221, 221, 0);
-  margin-right: 10px;
-  padding-left: 35px;
-  padding-right: 35px;
-}
-
-.tab-link-tab-2.w--current {
-  border: 2px solid var(--main-color);
-  background-color: rgba(192, 47, 47, 0);
-  border-radius: 20px;
-}
-
-.tab-link-tab-3 {
-  background-color: rgba(221, 221, 221, 0);
-  margin-right: 10px;
-  padding-left: 35px;
-  padding-right: 35px;
-}
-
-.tab-link-tab-3.w--current {
-  border: 2px solid var(--main-color);
-  background-color: rgba(221, 221, 221, 0);
-  border-radius: 20px;
-}
-
-.tab-link-tab-4 {
-  background-color: rgba(221, 221, 221, 0);
-  padding-left: 35px;
-  padding-right: 35px;
-}
-
-.tab-link-tab-4.w--current {
-  border: 2px solid var(--main-color);
-  background-color: rgba(221, 221, 221, 0);
-  border-radius: 20px;
-}
 
 .menu-tab {
   color: var(--main-color);
@@ -2845,7 +2809,7 @@ textarea.w-input, textarea.w-select {
 }
 
 .item-name {
-  width: 40%;
+  min-width: max-content;
   color: var(--main-color);
   text-align: left;
   margin-top: 0;
@@ -2863,19 +2827,18 @@ textarea.w-input, textarea.w-select {
 }
 
 .image-8 {
-  border: 2px solid var(--main-color);
+  outline: 2px solid var(--main-color);
   border-radius: 50%;
 }
 
-.cena {
-  width: 35%;
-}
+
 
 .cena-text {
-  width: 100%;
+  min-width: max-content;
   color: #a9251a;
   font-size: 16px;
   font-weight: 800;
+  text-align: end;
 }
 
 .name-and-price {
@@ -3116,9 +3079,6 @@ textarea.w-input, textarea.w-select {
     width: 90%;
   }
 
-  .item-name {
-    width: 50%;
-  }
 
   .cena-text {
     width: 100%;
@@ -3244,7 +3204,6 @@ textarea.w-input, textarea.w-select {
   }
 
   .item-name {
-    width: 100%;
     font-size: 16px;
     line-height: 18px;
   }
@@ -3254,9 +3213,7 @@ textarea.w-input, textarea.w-select {
     font-size: 14px;
   }
 
-  .cena {
-    width: 100%;
-  }
+  
 
   .cena-text {
     font-size: 14px;
@@ -3401,13 +3358,9 @@ textarea.w-input, textarea.w-select {
     align-items: flex-start;
   }
 
-  .item-name {
-    width: 100%;
-  }
 
   .cena-text {
     width: 100%;
-    font-size: 13px;
   }
 
   .name-and-price {
