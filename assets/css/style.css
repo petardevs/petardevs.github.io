@@ -2827,11 +2827,20 @@ textarea.w-input, textarea.w-select {
 }
 
 .image-8 {
-  outline: 2px solid var(--main-color);
+  border: 1px solid var(--main-color);
   border-radius: 50%;
 }
 
-
+.back-icon {
+   color: var(--main-color);
+   font-size: 25px;
+   display: none;
+   position: absolute;
+   left: 5px;
+   top: 50%;
+   transform: translateY(-50%);
+   padding: 10px;
+}
 
 .cena-text {
   min-width: max-content;
@@ -3355,7 +3364,7 @@ textarea.w-input, textarea.w-select {
   }
 
   .one-tem-row {
-    align-items: flex-start;
+    align-items: center;
   }
 
 
@@ -3400,6 +3409,9 @@ textarea.w-input, textarea.w-select {
 
   .paragraph-5 {
     font-size: 14px;
+  }
+  .image-8 {
+   width: 40px;
   }
 }
 .image-15 {
