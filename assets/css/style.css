@@ -2982,6 +2982,18 @@ textarea.w-input, textarea.w-select {
   font-size: 16px;
 }
 
+@media (min-width: 991px) {
+   .w-tab-link {
+      display: block !important;
+   }
+   .back-icon {
+      display: none !important;
+   }
+   .w-tab-content {
+      display: block !important;
+   }
+}
+
 @media screen and (max-width: 991px) {
    .w-tab-content {
       display: none;
