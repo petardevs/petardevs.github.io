@@ -2063,6 +2063,7 @@ textarea.w-input, textarea.w-select {
   content: " ";
   grid-area: 1 / 1 / 2 / 2;
   display: table;
+  display: none;
 }
 
 .w-tabs:after {
@@ -2097,6 +2098,7 @@ textarea.w-input, textarea.w-select {
   display: block;
   position: relative;
   overflow: hidden;
+  width: 70%;
 }
 
 .w-tab-pane {
@@ -2736,13 +2738,11 @@ textarea.w-input, textarea.w-select {
 
 .menu-wrap {
   z-index: 1;
-  height: 100%;
   min-height: 400px;
   -webkit-text-fill-color: inherit;
   mix-blend-mode: normal;
   background-image: url("https://assets-global.website-files.com/65452961b988fcb539412fc4/654639c22a1b5bd3371124f7_ivory-off-white-paper-texture.jpg");
   background-position: 50% 0;
-  background-size: cover;
   background-clip: border-box;
   border-radius: 20px;
   padding: 50px;
@@ -2752,6 +2752,8 @@ textarea.w-input, textarea.w-select {
 .tabs-menu {
   text-align: center;
   margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
 }
 
 .w-tab-link {
@@ -2780,6 +2782,8 @@ textarea.w-input, textarea.w-select {
 
 .tabs {
   margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .one-tem-row {
@@ -2979,6 +2983,19 @@ textarea.w-input, textarea.w-select {
 }
 
 @media screen and (max-width: 991px) {
+   .w-tab-content {
+      display: none;
+   }
+   .tabs {
+      flex-direction: column;
+      align-items: center;
+   }
+   .tabs-menu {
+      width: 100%;
+   }
+   .w-tab-content {
+      width: 100%;
+   }
   .section.hero {
     height: 140vh;
     display: block;
@@ -3114,6 +3131,7 @@ textarea.w-input, textarea.w-select {
 
   .menu-button {
     z-index: 30;
+    padding: 30px;
   }
 
   .menu-button.w--open {
@@ -3265,6 +3283,10 @@ textarea.w-input, textarea.w-select {
 @media screen and (max-width: 479px) {
   .section.hero {
     height: 130vh;
+  }
+
+  .swiper-slide img {
+   height: 400px;
   }
 
   .text-block.herobtn-text {

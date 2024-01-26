@@ -48,7 +48,7 @@ function myFunction(x) {
       tabContent.style.display = "block";
    }
 }
-var x = window.matchMedia("(max-width: 767px)");
+var x = window.matchMedia("(max-width: 991px)");
 
 window.addEventListener("resize", () => {
    myFunction(x);
