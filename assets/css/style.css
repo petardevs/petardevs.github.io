@@ -2324,7 +2324,8 @@ textarea.w-input, textarea.w-select {
 
 .slide {
   background-color: rgba(146, 25, 60, 0);
-  background-image: url("https://assets-global.website-files.com/65452961b988fcb539412fc4/654532d419792e7db44ed407_pexels-photo-11945527.webp");
+  /* background-image: url("https://assets-global.website-files.com/65452961b988fcb539412fc4/654532d419792e7db44ed407_pexels-photo-11945527.webp"); */
+  background-image: url(../img/av3.HEIC);
   background-position: 50% 0;
   background-size: cover;
   padding-top: 150px;
@@ -2332,7 +2333,8 @@ textarea.w-input, textarea.w-select {
 }
 
 .slide.sl2 {
-  background-image: url("https://assets-global.website-files.com/65452961b988fcb539412fc4/65453a80003426f10c5cc018_pexels-rachel-claire-5490965.jpg");
+  /* background-image: url("https://assets-global.website-files.com/65452961b988fcb539412fc4/65453a80003426f10c5cc018_pexels-rachel-claire-5490965.jpg"); */
+  background-image: url(../img/av2.HEIC);
   background-position: 50% 0;
   background-size: cover;
 }
